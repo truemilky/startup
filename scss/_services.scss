@@ -1,0 +1,125 @@
+.services {
+  color: #555555;
+  padding: 95px 0px;
+}
+
+.services__info {
+  text-align: center;
+  padding: 0px 15px;
+}
+
+.services__title {
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #555555;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+.services__subtitle {
+  font-size: 16px;
+  margin-bottom: 65px;
+}
+
+.services__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.services__item {
+  flex-basis: 31%;
+  padding: 0px 10px;
+}
+
+.services__icon {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border: 2px solid #dddddd;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c0301c;
+    transition: all .2s ease;
+  }
+}
+
+.services__icon-1 {
+  background: url("../img/services/icon-1.png") center no-repeat;
+
+  &:hover {
+    background-image: url("../img/services/icon-1-hover.png");
+    transition: all .2s ease;
+  }
+}
+
+.services__icon-2 {
+  background: url("../img/services/icon-2.png") center no-repeat;
+
+  &:hover {
+    background-image: url("../img/services/icon-2-hover.png");
+    transition: all .2s ease;
+  }
+}
+
+.services__icon-3 {
+  background: url("../img/services/icon-3.png") center no-repeat;
+
+  &:hover {
+    background-image: url("../img/services/icon-3-hover.png");
+    transition: all .2s ease;
+  }
+}
+
+.services__item-title {
+  font-family: "Roboto-Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.services__item-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 0px;
+  }
+  
+  .services__items {
+    flex-direction: column;
+  }
+
+  .services__item {
+    margin-bottom: 25px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .services__item {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .services__item {
+    width: 85%;
+  }
+}

@@ -1,0 +1,36 @@
+@import "fonts";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto-Regular";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@import "interfaces";
+@import "header";
+@import "intro";
+@import "services";
+@import "about-us";
+@import "works";
+@import "in-touch";
+@import "blog";
+@import "clients";
+@import "contact";
+@import "footer";

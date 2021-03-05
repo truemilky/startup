@@ -1,0 +1,147 @@
+.works {
+  padding: 90px 0px;
+}
+
+.works__heading {
+  text-align: center;
+  color: #555555;
+}
+
+.works__title {
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  margin-bottom: 25px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #555555;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+.works__nav {
+  margin-bottom: 70px;
+}
+
+.works__link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #555555;
+  margin: 0px 10px;
+
+  &:hover {
+    color: #c0301c;
+    transition: color .3s ease;
+  }
+}
+
+.works__items {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+}
+
+.works__image-box {
+  position: relative;
+
+  &:hover .works__overlay {
+    display: block;
+  }
+}
+
+.works__item {
+  padding: 10px;
+}
+
+.works__overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 48, 28, .6);
+  z-index: 13;
+}
+
+.works__overlay-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.works__overlay-title {
+  font-family: "Roboto-Bold"; 
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.works__overlay-group {
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.works__button {
+  position: relative;
+  width: 100px;
+  height: 38px;
+  background-color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #c0301c;
+  padding: 10px 25px 10px 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #c0301c;
+    border-bottom: 1px solid #c0301c;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: #c0301c;
+    color: #fff;
+    transition: all .3s ease;
+  }
+}
+
+.works__button:hover::after {
+  border-color: #fff;
+  transition: all .3s ease;
+}
+
+@media (max-width: 1140px) {
+  .works__items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .works {
+    padding: 50px 0px;
+  }
+
+  .works__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  } 
+
+  .works__link {
+    margin-bottom: 10px;
+  }
+}

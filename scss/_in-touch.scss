@@ -1,0 +1,34 @@
+.in-touch {
+  position: relative;
+  background: #c0301c url("../img/in-touch/bcg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 90px 0px;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 48, 28, .6);
+  }
+}
+
+.in-touch__wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+.in-touch__title {
+  position: relative;
+  max-width: 540px;
+  font-size: 30px;
+  line-height: 44px;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0px 35px;
+}

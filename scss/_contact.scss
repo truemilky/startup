@@ -1,0 +1,278 @@
+.contact {
+  padding: 90px 0px;
+  color: #555555;
+}
+
+.contact__heading {
+  text-align: center;
+}
+
+.contact__heading-title {
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #555555;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+.contact__heading-subtitle {
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 65px;
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__info {
+  padding-left: 20px;
+}
+
+.contact__address {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/contact/map-marker.png");
+  }
+}
+
+.contact__info-title {
+  font-family: "Roboto-Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.contact__info-text {
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
+.contact__phone {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-image: url("../img/contact/mobile-phone.png");
+  }
+}
+
+.contact__mail {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 11px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-image: url("../img/contact/envelope.png");
+  }
+}
+
+.contact__form-wrapper {
+  padding-right: 20px;
+}
+
+.contact__fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact__input {
+  height: 44px;
+  max-width: 350px;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  &:focus {
+    outline-color: #c0301c;
+  }
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.contact__message {
+  height: auto;
+  min-height: 100px;
+  font-family: "Roboto-Regular";
+  max-width: 730px;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  &:focus {
+    outline-color: #c0301c;
+  }
+}
+
+.contact__remark {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.contact__star {
+  color: #c0301c;
+}
+
+@media (max-width: 992px) {
+
+  .contact__wrapper {
+    justify-content: space-around;
+  }
+
+  .contact__fields {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact__input {
+    margin: 0px 15px 15px 0px;
+
+    &:nth-child(even) {
+      margin-right: 15px;
+    }
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__message {
+    max-width: 350px;
+  }
+
+  .button__contact {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .contact__remark {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 35px 0px;
+  }
+
+  .contact__heading {
+    padding: 0px 15px;
+  }
+
+  .contact__form-wrapper {
+    padding: 0;
+  }
+
+  .contact__input {
+    margin: 10px;
+
+    &:nth-child(even) {
+      margin-right: 10px;
+    }
+  }
+
+  .contact__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .contact__info {
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding: 0px;
+  }
+
+  .contact__address {
+    &::before {
+      left: 50px;
+    }
+  }
+
+  .contact__phone {
+    &::before {
+      left: 28px;
+    }
+  }
+
+  .contact__mail {
+    &::before {
+      left: 53px;
+    }
+  }
+
+  .contact__message {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .button__contact {
+    margin: 10px auto;
+  }
+
+  .contact__info-title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .contact__info-text {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__input {
+    width: 75%;
+  }
+
+  .contact__message {
+    width: 75%;
+  }
+
+  .contact__remark {
+    margin: 10px auto;
+    text-align: center;
+  }
+}

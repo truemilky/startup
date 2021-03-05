@@ -1,0 +1,128 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  z-index: 15;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.header__link--logo {
+  position: relative;
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  color: #fff;
+  z-index: 16;
+}
+
+.header__menu-list {
+  display: flex;
+}
+
+.header__menu-link {
+  padding: 6px 17px;
+  cursor: pointer;
+
+  &:last-child {
+    padding-right: 0px;
+  }
+}
+
+.header__menu-item {
+  font-size: 14px;
+  color: #fff;
+  list-style: none;
+
+  &:hover {
+    border-bottom: 1px solid #fff;
+    transition: border-bottom .3s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    position: fixed;
+    width: 100%;
+    background-color: #5b1310;
+    z-index: 20;
+  }
+
+  .header__menu {
+    transform: translateX(-250px);
+    transition: transform .3s;
+  }
+
+  .header__menu.active {
+    position: fixed;
+    display: block;
+    top: 59px;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: #5b1310 url("../img/intro/bcg.jpg") center no-repeat;
+    background-size: cover;
+    transform: translateX(0);
+    transition: transform .3s;
+    z-index: 11;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .45);
+    }
+  }
+
+  .header__menu-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .header__menu-list.active {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 5px;
+    height: 100%;
+    z-index: 16;
+  }
+
+  .header__menu-item {
+    font-size: 20px;
+
+    &:hover {
+      border :none;
+      color: #e0c1a4;
+    }
+  }
+
+  .burger-menu {
+    display: block;
+    order: 1;
+    z-index: 16;
+  }
+}
+@media (max-width: 576px) {
+  .header__menu.active {
+    width: 35%;
+  }
+
+  .header__menu-item {
+    font-size: 17px;
+  }
+}
