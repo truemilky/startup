@@ -61,7 +61,7 @@ li.slick-active button {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     display: block;
     width: 35px;
     height: 2px;
@@ -73,7 +73,7 @@ li.slick-active button {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     display: block;
     width: 35px;
     height: 2px;
@@ -84,6 +84,10 @@ li.slick-active button {
 
 .burger-menu__line {
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-1px);
   width: 35px;
   height: 2px;
   background-color: #fff;
